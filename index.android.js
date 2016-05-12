@@ -1,1 +1,3 @@
-export { default as CalendarManager } from './CalendarManager';
+import CalendarManager from './CalendarManager';
+
+module.exports = CalendarManager;
