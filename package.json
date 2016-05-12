@@ -1,0 +1,16 @@
+{
+  "name": "react-native-calendar-manager",
+  "version": "1.0.0",
+  "description": "A calendar manager for react-native",
+  "main": "index",
+  "repository": {
+      "type": "git",
+      "url": "git@bitbucket.org:Vunovati/react-native-calendar-manager.git"
+  },
+  "devDependencies": {
+      "eslint": "1.10.3",
+      "babel-eslint": "5.0.0-beta8",
+      "eslint-plugin-react": "3.16.1",
+      "eslint-config-airbnb": "4.0.0"
+  }
+}
