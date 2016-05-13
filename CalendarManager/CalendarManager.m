@@ -16,19 +16,18 @@
 
 RCT_EXPORT_MODULE();
 
-RCT_EXPORT_METHOD(addEvent:(NSString *)name details:(NSDictionary *)details)
+RCT_EXPORT_METHOD(addEvent:(NSDictionary *)details)
 {
     if (!self.eventStore)
     {
-        [self initEventStoreWithCalendarCapabilities:name details:details];
+        [self initEventStoreWithCalendarCapabilities:details];
         return;
     }
     
+    NSString *name = [RCTConvert NSString:details[@"name"]];
     NSString *location = [RCTConvert NSString:details[@"location"]];
     NSDate *startTime = [RCTConvert NSDate:details[@"startTime"]];
     NSDate *endTime = [RCTConvert NSDate:details[@"endTime"]];
-    BOOL useDeviceTimeZone = details[@"useDeviceTimeZone"];
-    RCTLogInfo(@"Creating an event %@ at %@ from %@ to %@ with device time %d", name, location, startTime, endTime, useDeviceTimeZone);
     
     EKEvent *event = nil;
     
@@ -55,7 +54,7 @@ RCT_EXPORT_METHOD(addEvent:(NSString *)name details:(NSDictionary *)details)
     [controller.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)initEventStoreWithCalendarCapabilities:(NSString *)name details:(NSDictionary *)details
+- (void)initEventStoreWithCalendarCapabilities:(NSDictionary *)details
 {
     
     EKEventStore *localEventStore = [[EKEventStore alloc] init];
@@ -64,7 +63,7 @@ RCT_EXPORT_METHOD(addEvent:(NSString *)name details:(NSDictionary *)details)
          if (granted)
              dispatch_async(dispatch_get_main_queue(), ^{
                  self.eventStore = localEventStore;
-                 [self addEvent:name details:details];
+                 [self addEvent:details];
              });
          else
              NSLog(@"User denied calendar access");

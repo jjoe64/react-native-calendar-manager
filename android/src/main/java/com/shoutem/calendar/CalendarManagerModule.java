@@ -19,7 +19,8 @@ public class CalendarManagerModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void addEvent(String name, ReadableMap details) {
+    public void addEvent(ReadableMap details) {
+        String name = details.getString("name");
         String location = details.getString("location");
         // Double is used since int is not big enough to fit all values of a JavaScript Number
         Double startTime = details.getDouble("startTime"); // millis since Unix epoch
