@@ -12,7 +12,7 @@ Exposes `addEvent` method which can save an event to an Android or iOS device's 
 
 Run `npm install --save git+ssh://git@bitbucket.org:Vunovati/react-native-calendar-manager.git`
 
-### Semi-Automatic plugin linking using rnpm
+### Automatic plugin linking using rnpm
 
 You can use [`rnpm`](https://github.com/rnpm/rnpm) to add native dependencies automatically.
 Just run:
@@ -21,17 +21,9 @@ Just run:
 
 Which will link all native dependencies from the plugin.
 
-#### iOS
-CalendarManager needs to use a reference to your app's AppDelegate so you need to add it to CalendarManager projects build path.
+It will also add a directory containing your app's AppDelegate to CalendarManager projects build path which is necessary for building the iOS dependencies.
 
-Click on `CalendarManager.xcodeproj` in `Libraries` and go the `Build
-   Settings` tab. Double click the text to the right of `Header Search
-   Paths` and add the line `$(SRCROOT)/../../ios/<YOUR PROJECT'S NAME>`
-
-#### Android
-No additional steps are needed.
-
-### Manual linking
+### Manual plugin linking
 
 #### iOS
 
