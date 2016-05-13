@@ -84,7 +84,8 @@ import CalendarManager from 'react-native-calendar-manager';
 
 const inTenMinutes = Date.now() + 1000 * 60 * 10;
 const inTwentyMinutes = Date.now() + 1000 * 60 * 10 * 2;
-CalendarManager.addEvent('Coffee', {
+CalendarManager.addEvent({
+  name: 'Coffee',
   location: 'Heinzelova 33',
   startTime: inTenMinutes,
   endTime: inTwentyMinutes,
