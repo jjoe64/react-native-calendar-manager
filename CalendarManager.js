@@ -1,11 +1,11 @@
 /**
- * This exposes the native CalendarManager module as a JS module.
- * It has a function 'addEvent' which takes the following parameters:
+ * Exposes the native CalendarManager module as a JS module.
+ * It has a function 'addEvent' which takes the following parameter:
  *
- * 1. String name: A string with the name of the event
- * 2. Object details: the details of the event to be added in the
+ * Object details: the details of the event to be added in the
  * following format:
  *     {
+ *       name: string
  *       location: string
  *       startTime: Number - number of miliseconds since epoch
  *       endTime: Number - number of miliseconds since epoch
