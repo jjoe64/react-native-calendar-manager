@@ -10,7 +10,7 @@ Exposes `addEvent` method which can save an event to an Android or iOS device's 
 
 ## Plugin installation
 
-Run `npm install --save git+ssh://git@bitbucket.org:Vunovati/react-native-calendar-manager.git`
+Run `npm install --save git+ssh://git@bitbucket.org:fiveminutes/react-native-calendar-manager.git`
 
 ### Automatic plugin linking using rnpm
 

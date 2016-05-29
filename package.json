@@ -5,7 +5,7 @@
   "main": "index",
   "repository": {
       "type": "git",
-      "url": "git@bitbucket.org:Vunovati/react-native-calendar-manager.git"
+      "url": "git@bitbucket.org:fiveminutes/react-native-calendar-manager.git"
   },
   "dependencies": {
       "xcode": "0.8.4",
