@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 'use strict';
-
-if (process.platform === 'darwin') {
+console.log(process.platform);
+if (process.platform === 'darwin' && !/^win/.test(process.platform)) {
   var fs = require('fs');
   var xcode = require('xcode');
   var rnpm = require('rnpm/src/config');
