@@ -9,8 +9,9 @@
 #import "CalendarManager.h"
 
 #import <Foundation/Foundation.h>
-#import "RCTLog.h"
-#import "RCTConvert.h"
+#import <React/RCTLog.h>
+#import <React/RCTConvert.h>
+
 #import "AppDelegate.h"
 @implementation CalendarManager
 
