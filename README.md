@@ -3,6 +3,8 @@
 A calendar manager for React Native.
 Exposes `addEvent` method which can save an event to an Android or iOS device's native calendar app.
 
+Hint: This is a fork of the project of fiveminutes hosted on BitBucket: `https://bitbucket.org/fiveminutes/react-native-calendar-manager`. I needed to change something and it's much better on Github so I decided to fork it and publish here. If the authors contact me, I will grant full permission.
+
 ## Supported React Native platforms
 
 - Android
@@ -10,7 +12,7 @@ Exposes `addEvent` method which can save an event to an Android or iOS device's 
 
 ## Plugin installation
 
-Run `npm install --save git+ssh://git@bitbucket.org:fiveminutes/react-native-calendar-manager.git`
+Run `npm install --save https://github.com/jjoe64/react-native-calendar-manager.git`
 
 ### Automatic plugin linking using rnpm
 
